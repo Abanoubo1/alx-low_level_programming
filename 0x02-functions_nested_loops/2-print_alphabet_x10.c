@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Program that prints _putchar
+ * print_alphabet_x10 - Program that prints _putchar
  * followed by a new line
  * Return: 0 (Success)
  */
@@ -16,5 +16,4 @@ void print_alphabet_x10(void)
 		num++;
 	}
 	_putchar('\n');
-	return (0);
 }
