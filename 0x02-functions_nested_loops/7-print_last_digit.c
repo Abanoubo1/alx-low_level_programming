@@ -1,17 +1,22 @@
-#include "main.h"
+#include"main.h"
 
 /**
- *  _abs - Program that prints _putchar
- * followed by a new line
+ * print_last_digit - print last digit of a number.
  *
- * @n: checks input of function
+ * @n: takes number input
  *
- * Return: returns 1 if n is lowercase otherwise always 0 (Success)
- */
+ * Return: lastDigit
+*/
 
-int _abs(int n)
+int print_last_digit(int n)
 {
+	int lastDigit;
+
 	if (n < 0)
-		n = n * (-1);
-	return (n);
+		lastDigit = -1 * (n % 10);
+	else
+		lastDigit = n % 10;
+
+	_putchar(lastDigit + '0');
+	return (lastDigit);
 }

@@ -1,25 +1,33 @@
-#include "main.h"
+#include"main.h"
 
 /**
- * print_to_98 - Program that prints _putchar
- * followed by a new line
+ * print_to_98 - print n to 98 counts
+ *           separated by comma, followed
+ *           by space and number should be
+ *           printed in order
  *
- * @n: checks input of function
- *
- * Return: a + b
- */
+ * @n: user input
+*/
 
 void print_to_98(int n)
 {
-	int count;
+	int index = 0;
 
-		if (n > 98)
-
-		for (int i = n; i > 98; i--)
+	if (n > 98)
+	{
+		while (index > 98)
+		{
 			printf("%d, ", i);
-		else
-
-		for (int i = n; i < 98; i++)
+			index--;
+		}
+	}
+	else
+	{
+		while (index < 98)
+		{
 			printf("%d, ", i);
-			printf("98\n");
+			index++;
+		}
+	}
+	printf("98\n");
 }
