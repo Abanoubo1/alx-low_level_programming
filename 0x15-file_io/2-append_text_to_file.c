@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * append text into file - Used to append an text into the last of the file.
+ * append_text_to_file - Used to append an  text at the end of a file.
  *
- * @filename: share into name of file.
- * @text_content: A string to be add into end  file.
+ * @filename: A Pointes to the name of file.
+ * @text_content: The string to be add int the end of file.
  *
  * Return: 1 on success, -1 on failure
  */
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int a, writter, count = 0;
+	int fa, writter, count = 0;
 
 	if (filename == NULL)
 		return (-1);
@@ -22,13 +22,13 @@ int append_text_to_file(const char *filename, char *text_content)
 			count++;
 	}
 
-	a = open(filename, O_WRONLY | O_APPEND);
+	fa = open(filename, O_WRONLY | O_APPEND);
 	writter = write(fp, text_content, count);
 
-	if (a == -1 || writter == -1)
+	if (af == -1 || writter == -1)
 		return (-1);
 
-	close(a);
+	close(fa);
 
 	return (1);
 }
