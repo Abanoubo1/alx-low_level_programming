@@ -19,9 +19,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fileId;
 
 	/*Open*/
+
 	fp = fopen(filename, "r");
 
 	/*Processing*/
+
 	if (fp == NULL)
 		return (0);
 
@@ -43,7 +45,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	free(buffer);
-	
+
 	/*Close*/
 	fclose(fp);
 
